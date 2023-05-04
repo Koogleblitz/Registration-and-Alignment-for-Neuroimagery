@@ -3,6 +3,8 @@ from matplotlib import pyplot as plt
 import matplotlib.animation as animation
 import seaborn as sns 
 import numpy as np
+from tkinter import filedialog
+
 
 vTensor= io.imread(r"C:\Users\richa\OneDrive\Neuroscience\Data\DBS_preprocessed_ROI_and_3D_data\normalized\TIFF_registered\dft_avgTensor.tiff")
 mult= 1
@@ -59,4 +61,32 @@ plt.show()
 # anim = animation.FuncAnimation(fig, animate, init_func=init, frames=frameCount, repeat=False)
 
 # plt.show()
+
+
+#------------------
+
+# export_file_path = filedialog.asksaveasfilename(defaultextension = '.png')
+# im1.save(export_file_path)
+
+
+#------------------
+# https://medium.com/@enriqueav/how-to-create-video-animations-using-python-and-opencv-881b18e41397
+
+# import numpy as np
+# from cv2 import VideoWriter, VideoWriter_fourcc
+
+# width = 1280
+# height = 720
+# FPS = 24
+# seconds = 10
+
+# fourcc = VideoWriter_fourcc(*'MP42')
+# video = VideoWriter('./noise.avi', fourcc, float(FPS), (width, height))
+
+# for _ in range(FPS*seconds):
+#     frame = np.random.randint(0, 256, 
+#                               (height, width, 3), 
+#                               dtype=np.uint8)
+#     video.write(frame)
+# video.release()
 
